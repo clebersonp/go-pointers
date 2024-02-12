@@ -9,6 +9,7 @@ func main() {
 	agePointer = &age   // accessing the age memory address (pointer)
 	fmt.Println("Age pointer:", agePointer)
 	fmt.Println("Age pointer real value:", *agePointer) // *pointer to get the real value from pointer(memory address)
+	// For a pointer, the 'null value' (default value) is nil
 
 	fmt.Println("Age:", age)
 
