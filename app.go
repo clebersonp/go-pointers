@@ -13,10 +13,11 @@ func main() {
 
 	fmt.Println("Age:", age)
 
-	adultYears := getAdultYears(age)
+	adultYears := getAdultYears(&age) // accessing the memory address and pass it as pointer
 	fmt.Println(adultYears)
 }
 
-func getAdultYears(age int) int {
-	return age - 18
+// age *int means that will pass a pointer (copy of address memory) not copy value
+func getAdultYears(age *int) int {
+	return *age - 18 //*age means to access the real data value from memory address
 }
